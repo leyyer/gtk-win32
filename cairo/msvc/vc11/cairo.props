@@ -178,6 +178,7 @@ copy $(SolutionDir)$(Configuration)\$(Platform)\bin\*.lib $(CopyDir)\lib
     <_PropertySheetDisplayName>cairoprops</_PropertySheetDisplayName>
     <OutDir>$(SolutionDir)$(Configuration)\$(PlatformName)\bin\</OutDir>
     <IntDir>$(SolutionDir)$(Configuration)\$(PlatformName)\obj\$(ProjectName)\</IntDir>
+	<PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -186,6 +187,7 @@ copy $(SolutionDir)$(Configuration)\$(Platform)\bin\*.lib $(CopyDir)\lib
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <DisableSpecificWarnings>4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+	  <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
       <AdditionalDependencies>pixman-1.lib;libpng15.lib;zdll.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
