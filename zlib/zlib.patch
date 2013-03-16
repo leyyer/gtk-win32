@@ -1,0 +1,12 @@
+diff -ruN --strip-trailing-cr zlib-1.2.7.orig/win32/Makefile.msc zlib-1.2.7/win32/Makefile.msc
+--- zlib-1.2.7.orig/win32/Makefile.msc	2012-01-16 18:51:30 +0100
++++ zlib-1.2.7/win32/Makefile.msc	2013-03-16 03:08:31 +0100
+@@ -22,7 +22,7 @@
+ LD = link
+ AR = lib
+ RC = rc
+-CFLAGS  = -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib" $(LOC)
++CFLAGS  = -nologo -MD -W3 -Od -Oy- -Zi -Fd"zlib" $(LOC)
+ WFLAGS  = -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE
+ ASFLAGS = -coff -Zi $(LOC)
+ LDFLAGS = -nologo -debug -incremental:no -opt:ref
