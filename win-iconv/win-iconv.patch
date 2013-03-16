@@ -1,0 +1,12 @@
+diff -ruN --strip-trailing-cr win-iconv-0.0.6.orig/CMakeLists.txt win-iconv-0.0.6/CMakeLists.txt
+--- win-iconv-0.0.6.orig/CMakeLists.txt	2013-02-11 18:35:38 +0100
++++ win-iconv-0.0.6/CMakeLists.txt	2013-03-16 05:11:18 +0100
+@@ -22,7 +22,7 @@
+ endif(BUILD_TEST)
+ 
+ if(MSVC)
+-    add_definitions(-D_CRT_SECURE_NO_WARNINGS)
++    add_definitions(-D_CRT_SECURE_NO_WARNINGS -Od)
+ endif(MSVC)
+ 
+ if(NOT WINCE)
