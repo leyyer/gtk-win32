@@ -32,12 +32,14 @@ copy $(SolutionDir)$(Configuration)\$(Platform)\bin\*-$(ApiVersion).lib $(CopyDi
     <_PropertySheetDisplayName>pixmanprops</_PropertySheetDisplayName>
     <OutDir>$(SolutionDir)$(Configuration)\$(PlatformName)\bin\</OutDir>
     <IntDir>$(SolutionDir)$(Configuration)\$(PlatformName)\obj\$(ProjectName)\</IntDir>
+	<PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>..\..\..;..\..\..\pixman;$(PixmanEtcInstallRoot)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4244;4101;4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+	  <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(PixmanEtcInstallRoot)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>

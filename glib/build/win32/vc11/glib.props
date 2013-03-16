@@ -538,6 +538,7 @@ copy ..\..\..\gio\gschema.dtd $(CopyDir)\share\glib-$(ApiVersion)\schemas
     <_PropertySheetDisplayName>glibprops</_PropertySheetDisplayName>
     <OutDir>$(SolutionDir)$(Configuration)\$(PlatformName)\bin\</OutDir>
     <IntDir>$(SolutionDir)$(Configuration)\$(PlatformName)\obj\$(ProjectName)\</IntDir>
+	<PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -545,6 +546,7 @@ copy ..\..\..\gio\gschema.dtd $(CopyDir)\share\glib-$(ApiVersion)\schemas
       <AdditionalIncludeDirectories>..\..\..;..\..\..\glib;$(GlibEtcInstallRoot)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ForcedIncludeFiles>msvc_recommended_pragmas.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+	  <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
       <AdditionalDependencies>libintl.lib;%(AdditionalDependencies)</AdditionalDependencies>
