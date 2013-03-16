@@ -3,10 +3,14 @@
    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup Label="Globals">
 	</PropertyGroup>
+	<PropertyGroup>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
 	<ItemDefinitionGroup>
 		<ClCompile>
 			<AdditionalIncludeDirectories>..\build\$(Platform)\include</AdditionalIncludeDirectories>
 			<PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<Optimization>Disabled</Optimization>
 		</ClCompile>
 		<Link>
 			<!--AdditionalDependencies></AdditionalDependencies-->
