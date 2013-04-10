@@ -1,4 +1,4 @@
- * Download [cairo 1.12.8](http://cairographics.org/releases/cairo-1.12.8.tar.xz)
+ * Download [cairo 1.12.14](http://cairographics.org/releases/cairo-1.12.14.tar.xz)
  * Download [VS solution](https://live.gnome.org/GTK%2B/Win32/MSVCCompilationOfGTKStack?action=AttachFile&do=get&target=cairo-vsprojects.zip)
  * Extract to `C:\mozilla-build\hexchat`
  * In `msvc\vc11\cairo.props`, replace:
@@ -21,6 +21,8 @@
 `copy $(SolutionDir)$(Configuration)\$(Platform)\include\*.h $(CopyDir)\include\cairo`
 	* Add to `CairoDoInstall`:  
 `copy $(SolutionDir)$(Configuration)\$(Platform)\bin\*.pdb $(CopyDir)\bin`
+ * Add `<ClCompile Include="..\..\src\cairo-path-stroke-traps.c" />` `to cairo.vcxproj`
+ * Add `<Optimization>Disabled</Optimization>` to `ClCompile` for `Release_FC|Win32` and `Release_FC|x64`
  * Open `msvc\vc11\cairo.sln` with VS and select `Release_FC` configuration
  * Make `cairo-gobject` and `install` buildable
  * Make `install` depend on `cairo-gobject`

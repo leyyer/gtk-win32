@@ -563,6 +563,7 @@
       <Command>$(PreBuildCfgStd)$(PreBuildCfgFT)$(PreBuildCfgFC)$(GenTmpFeaturesHeader)</Command>
     </PreBuildEvent>
     <ClCompile>
+      <Optimization>Disabled</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -589,6 +590,7 @@
       <Command>$(PreBuildCfgStd)$(PreBuildCfgFT)$(PreBuildCfgFC)$(GenTmpFeaturesHeader)</Command>
     </PreBuildEvent>
     <ClCompile>
+      <Optimization>Disabled</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -1011,6 +1013,7 @@
     <ClCompile Include="..\..\src\cairo-path-stroke.c" />
     <ClCompile Include="..\..\src\cairo-path-stroke-boxes.c" />
     <ClCompile Include="..\..\src\cairo-path-stroke-polygon.c" />
+    <ClCompile Include="..\..\src\cairo-path-stroke-traps.c" />
     <ClCompile Include="..\..\src\cairo-path-stroke-tristrip.c" />
     <ClCompile Include="..\..\src\cairo-pattern.c" />
     <ClCompile Include="..\..\src\cairo-pen.c" />
